@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Brand palette: red + white, blended with deep wine and soft blush. */
+@theme {
+  --color-brand-50: #fff5f5;
+  --color-brand-100: #fde8e8;
+  --color-brand-200: #f9c9ca;
+  --color-brand-300: #f29b9d;
+  --color-brand-400: #e8686b;
+  --color-brand-500: #d93035;
+  --color-brand-600: #c41e24;
+  --color-brand-700: #a0171c;
+  --color-brand-800: #7a1318;
+  --color-brand-900: #4d0b0f;
+
+  --color-ink: #1f1416;
+  --color-muted: #6b5d60;
+  --color-line: #f0e4e5;
+  --color-surface: #fffafa;
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade-up: fade-up 0.35s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
